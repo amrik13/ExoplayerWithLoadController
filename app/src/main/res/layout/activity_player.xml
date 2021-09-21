@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerActivity">
+
+    <com.google.android.exoplayer2.ui.StyledPlayerView
+        android:id="@+id/styled_playerView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_250dp"
+        app:show_buffering="always"
+        app:resize_mode="fill"
+        android:background="@drawable/googleg_standard_color_18"
+        app:show_subtitle_button="false"
+        app:show_shuffle_button="false" />
+
+    <RelativeLayout
+        android:id="@+id/log_layout"
+        android:layout_below="@id/styled_playerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/subLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dim_5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bufferDurationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dim_5dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Buffer Duration: "/>
+
+            <TextView
+                android:id="@+id/isPlayingView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dim_5dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Playing: "/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/subLayout2"
+            android:layout_below="@id/subLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_5dp"
+            android:layout_marginEnd="@dimen/dim_5dp"
+            android:layout_marginBottom="@dimen/dim_5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/totalDurationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dim_5dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Total Duration: "/>
+
+            <TextView
+                android:id="@+id/currentPositionView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dim_5dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Current Position: "/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/subLayout3"
+            android:layout_below="@id/subLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_5dp"
+            android:layout_marginEnd="@dimen/dim_5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/minMaxStartBufferView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dim_5dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Min/Max/Start Buffer time: "/>
+
+            <TextView
+                android:id="@+id/bufferPerctgView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dim_5dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Buffer %: "/>
+
+        </LinearLayout>
+
+        <TextView
+            android:padding="@dimen/dim_20dp"
+            android:text="@string/description_str"
+            android:textSize="@dimen/dim_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subLayout3"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

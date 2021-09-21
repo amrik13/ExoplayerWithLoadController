@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/go_to_player_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go_to_player_str"
+        android:textSize="@dimen/dim_22sp"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/go_to_player_text"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dash_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dash"
+            android:layout_weight="1"
+            android:textSize="@dimen/dim_18sp"
+            android:backgroundTint="@color/teal_200"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dim_20dp" />
+
+        <Button
+            android:id="@+id/hls_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HLS"
+            android:layout_weight="1"
+            android:textSize="@dimen/dim_18sp"
+            android:backgroundTint="@color/teal_200"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dim_20dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

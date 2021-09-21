@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DemoPlayerPOC</string>
+    <string name="go_to_player_str">Go To Player</string>
+    <string name="description_str">Note: Playback will start after 20 Sec of segment downloaded, because startPlayback BufferDuration is 20 sec. Every time 25 - 30 sec of check will be downloaded by player for continues streaming because 25/30 is minimum/maximum buffer duration set to Custom Load Controller.</string>
+</resources>
