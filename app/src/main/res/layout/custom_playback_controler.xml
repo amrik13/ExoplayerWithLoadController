@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:background="#A3000000"
+    tools:targetApi="28">
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton android:id="@id/exo_play"
+            android:src="@drawable/player_play_icon"
+            android:layout_width="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_50dp"
+            android:scaleType="centerInside"
+            android:visibility="invisible"
+            android:layout_centerInParent="true"
+            android:background="#00000000"/>
+
+        <ImageButton android:id="@id/exo_pause"
+            android:visibility="invisible"
+            android:layout_centerInParent="true"
+            android:src="@drawable/player_pause_icon"
+            android:scaleType="centerInside"
+            android:layout_width="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_50dp"
+            android:background="#00000000"/>
+
+        <ImageButton android:id="@id/exo_rew"
+            android:layout_width="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_50dp"
+            android:scaleType="centerInside"
+            android:layout_marginRight="@dimen/dim_10dp"
+            android:layout_toLeftOf="@+id/exo_play"
+            android:src="@drawable/player_rewind_icon"
+            style="@style/ExoMediaButton.Rewind"/>
+
+        <ImageButton android:id="@id/exo_ffwd"
+            android:layout_width="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_50dp"
+            android:scaleType="centerInside"
+            android:layout_toRightOf="@+id/exo_play"
+            android:layout_marginLeft="@dimen/dim_10dp"
+            android:src="@drawable/player_fwd_icon"
+            style="@style/ExoMediaButton.FastForward"/>
+
+        <ImageButton android:id="@id/exo_prev"
+            android:layout_width="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_50dp"
+            android:scaleType="centerInside"
+            android:layout_toLeftOf="@+id/exo_rew"
+            android:layout_marginRight="@dimen/dim_10dp"
+            android:src="@drawable/player_previous_icon"
+            style="@style/ExoMediaButton.Previous"/>
+
+        <ImageButton android:id="@id/exo_next"
+            android:layout_width="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_50dp"
+            android:scaleType="centerInside"
+            android:layout_toRightOf="@+id/exo_ffwd"
+            android:layout_marginLeft="@dimen/dim_10dp"
+            android:src="@drawable/player_next_icon"
+            style="@style/ExoMediaButton.Next"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView android:id="@id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:includeFontPadding="false"
+            android:textColor="#FFBEBEBE"/>
+
+        <View android:id="@id/exo_progress_placeholder"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="26dp"/>
+
+        <TextView android:id="@id/exo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:includeFontPadding="false"
+            android:textColor="#FFBEBEBE"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

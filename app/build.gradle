@@ -38,6 +38,7 @@ dependencies {
 
     implementation 'com.google.android.exoplayer:exoplayer:2.15.0'
     implementation 'com.google.android.exoplayer:extension-ima:2.15.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
 
 
 }

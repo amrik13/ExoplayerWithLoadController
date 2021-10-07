@@ -13,6 +13,7 @@
         android:theme="@style/Theme.DemoPlayerPOC">
         <activity
             android:name=".PlayerActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

@@ -15,6 +15,7 @@
         android:layout_centerInParent="true"/>
 
     <LinearLayout
+        android:id="@+id/button_layout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/go_to_player_text"
@@ -36,6 +37,49 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="HLS"
+            android:layout_weight="1"
+            android:textSize="@dimen/dim_18sp"
+            android:backgroundTint="@color/teal_200"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dim_20dp" />
+
+        <Button
+            android:id="@+id/live_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Live"
+            android:layout_weight="1"
+            android:textSize="@dimen/dim_18sp"
+            android:backgroundTint="@color/teal_200"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dim_20dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/button_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_layout1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/ads_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IMA Ads"
+            android:layout_weight="1"
+            android:textSize="@dimen/dim_18sp"
+            android:backgroundTint="@color/teal_200"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dim_20dp" />
+
+        <Button
+            android:id="@+id/ads_buttonLive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Live+Ads "
             android:layout_weight="1"
             android:textSize="@dimen/dim_18sp"
             android:backgroundTint="@color/teal_200"

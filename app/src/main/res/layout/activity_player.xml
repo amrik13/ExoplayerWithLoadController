@@ -12,9 +12,44 @@
         android:layout_height="@dimen/dim_250dp"
         app:show_buffering="always"
         app:resize_mode="fill"
-        android:background="@drawable/googleg_standard_color_18"
-        app:show_subtitle_button="false"
+        app:animation_enabled="false"
+        android:background="@color/black"
+        app:controller_layout_id="@layout/custom_playback_controler"
+        app:show_subtitle_button="true"
         app:show_shuffle_button="false" />
+
+    <LinearLayout
+        android:id="@+id/quality_parent"
+        android:layout_margin="@dimen/dim_15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/dim_108dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/audioTrackView"
+            android:layout_width="@dimen/dim_28dp"
+            android:layout_height="@dimen/dim_28dp"
+            android:layout_weight="1"
+            android:src="@drawable/audio_track_icon"/>
+
+        <ImageView
+            android:id="@+id/videoTrackView"
+            android:layout_width="@dimen/dim_28dp"
+            android:layout_height="@dimen/dim_28dp"
+            android:layout_weight="1"
+            android:src="@drawable/video_track_icon"/>
+
+        <ImageView
+            android:id="@+id/subTitleView"
+            android:layout_width="@dimen/dim_28dp"
+            android:layout_height="@dimen/dim_28dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:src="@drawable/subtitle_on"/>
+
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/log_layout"
